@@ -11,11 +11,7 @@
   const WAIT_TO_CONNECT = 2000;
   // time in ms to wait before new employees load after scroll
   const WAIT_AFTER_SCROLL = 3000;
-  // message to connect (%EMPLOYEE% and %COMPANY% will be replaced with real values)
-  const MESSAGE = `Hi %EMPLOYEE%, I'm a Software Engineer with 4 yrs of experience in full-stack web development.
-	I see you're currently working at %COMPANY% where I saw a Full Stack job post and was interested to hear more about it.
-	Would you (or a colleague) have time to chat about the position?
-	Thanks! Amine`;
+	
   // keywords to filter employees in specific positions
   const POSITION_KEYWORDS = [
     "software",
@@ -29,24 +25,7 @@
     "president",
     "head"
   ];
-
-  // <--> //
-
-  const MESSAGE_CHAR_LIMIT = 300;
-
-  function buildMessage(employee) {
-    const company = document.getElementsByClassName(
-      "org-top-card-summary__title"
-    )[0].title;
-
-    const replacements = { "%COMPANY%": company, "%EMPLOYEE%": employee };
-    const message = MESSAGE.replace(/%\w+%/g, (i) => {
-      return replacements[i];
-    });
-
-    return message.length <= MESSAGE_CHAR_LIMIT ? message : "";
-  }
-
+    
   function getButtonElements() {
     return [
       ...document.querySelectorAll(
