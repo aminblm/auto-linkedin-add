@@ -102,7 +102,7 @@
   } catch {
     console.log(
       `⛔ Whoops, looks like something went wrong.
-		Please go to https://github.com/mariiio/linkedin_connect and follow the instructions.`
+		Please go to https://github.com/amboulouma/auto-linkedin-add/company-people-add.js and follow the instructions.`
     );
   }
 })();
